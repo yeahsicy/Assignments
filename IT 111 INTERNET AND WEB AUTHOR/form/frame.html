@@ -1,0 +1,185 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW 5 - Form</title>
+
+    <!--Remy Sharp Shim -->
+    <!--[if lte IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js" >
+    </script>
+    <![endif]-->
+    <style>
+        * {
+            margin: 0;
+            opacity: 0.98;
+        }
+
+        #wrapper {
+            margin: 10px auto;
+            width: 70%;
+        }
+
+        header {
+            background-color: #47B1C1;
+            text-align: center;
+            color: white;
+            font-family: college;
+            word-spacing: 10px;
+            letter-spacing: 5px;
+            font-size: 35px;
+            line-height: 100px;
+        }
+
+        nav {
+            background-color: #007355;
+        }
+
+        ul.nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li.nav {
+            float: left;
+            width: 25%;
+        }
+
+            li.nav a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 20px;
+                text-decoration: none;
+            }
+
+                li.nav a:hover {
+                    background-color: #111111;
+                }
+
+        main {
+            background-color: #A49791;
+            float: left;
+            width: 55%;
+            height:600px;
+        }
+
+        aside {
+            background-color: #A66B63;
+            float: left;
+            width: 45%;
+            height:600px;
+        }
+
+        .content {
+            padding: 10px;
+            color: white;
+            line-height: 40px;
+        }
+
+        footer {
+            background-color: #DB4B4A;
+            clear: both;
+        }
+
+        @font-face {
+            font-family: college;
+            src: url(fonts/college.ttf);
+        }
+
+        img.valid {
+            max-height: 80px;
+        }
+
+        tr.valid td {
+            padding: 0px 20px;
+            width: 30%;
+        }
+
+        a.valid {
+            color: black;
+        }
+
+        body {
+            background-image: url(images/background.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: top 30% left 50%;
+            background-size: 90%;
+        }
+
+        textarea {
+            max-width: 80%;
+            width: 80%;
+            height: 50px;
+            max-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>HO'S HERBS & MASSAGE</h1>
+        </header>
+        <nav>
+            <ul class="nav">
+                <li class="nav"><a href="">HOME</a></li>
+                <li class="nav"><a href="">SERVICE</a></li>
+                <li class="nav"><a href="">ABOUT</a></li>
+                <li class="nav"><a href="">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div id="main_aside">
+            <main>
+                <div class="content">
+                    <h2>FEEDBACK</h2>
+                    <form action="formhandler.php" method="post">
+                        NAME:<br />
+                        <input type="text" name="NAME"><br />
+                        EMAIL:<br />
+                        <input type="email" name="EMAIL"><br />
+                        GENDER:<br />
+                        <input type="radio" name="GENDER" value="MALE">MALE<br />
+                        <input type="radio" name="GENDER" value="FEMALE">FEMALE<br />
+                        HOW DO YOU KNOW US?<br />
+                        <input type="checkbox" name="ways[]" value="FRIENDS" />FRIENDS&nbsp;
+                        <input type="checkbox" name="ways[]" value="RELATIVES" />RELATIVES&nbsp;
+                        <input type="checkbox" name="ways[]" value="INTERNET" />INTERNET&nbsp;
+                        <input type="checkbox" name="ways[]" value="NEWSPAPER" />NEWSPAPER&nbsp;
+                        <br />
+                        COMMENTS:<br />
+                        <textarea name="COMMENTS"></textarea><br />
+                        <input type="submit" value="SUBMIT">&nbsp;&nbsp;
+                        <input type="reset" value="RESET">
+                    </form>
+                </div>
+            </main>
+            <aside>
+                <div class="content">
+                    <h2>INFORMATION</h2>
+                    <br />
+                    <p>MON - SAT: 10:30AM - 6:00PM</p>
+                    <p>SUNDAY:&nbsp;&nbsp;&nbsp;&nbsp;10:30AM - 2:00PM</p>
+                    <br />
+                    <p>ADDRESS: 626 S JACKSON ST, SEATTLE WA, 98104</p>
+                    <p>CELL:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(206) 992-4079</p>
+                    <p>OFFICE: (206) 652-0696</p>
+                </div>
+            </aside>
+        </div>
+        <footer>
+            <table>
+                <tr class="valid">
+                    <td>All rights reserved</td>
+                    <td>Copyright © 2017</td>
+                    <td><a href="../index.html" class="valid">Web design by Ziwei Ye</a></td>
+                    <td><a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fcompass.northseattle.edu%2F~zye%2Fit111%2Fform%2Fframe.html"><img class="valid" src="images/HTML5_1Color_Black.png" alt="validator"/></a></td>
+                </tr>
+            </table>
+        </footer>
+    </div>
+</body>
+</html>
