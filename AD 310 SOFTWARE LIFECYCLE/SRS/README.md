@@ -1,0 +1,1 @@
+Construct an SRS using the template srs.docPreview the documentView in a new window for your case study.  This is a group assignment. 
