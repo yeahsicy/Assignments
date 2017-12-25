@@ -1,0 +1,1 @@
+Program 5 is actually two programs.  The first, Program 5.1 is a bubble sort (33 points).  The second, 5.2 is a merge sort (67 points).  You are also going to insert timing logic in to see how the two program compare.

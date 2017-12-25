@@ -1,0 +1,1 @@
+Write a program that takes in a number of integers and hashes them for storage into a 10 element array.  Use a modulus hashing technique.  Upon a collision, probe right (higher indices) until an appropriate space is found.  Print out the contents of the array for submission.  Use the following numbers: 64, 12, 84, 1, 31, 63, 99, 14, 38.
