@@ -1,0 +1,176 @@
+
+        * {
+            margin: 0;
+            opacity: 0.98;
+        }
+
+        #wrapper {
+            margin: 10px auto;
+            width: 70%;
+        }
+
+        header {
+            background-color: #47B1C1;
+            text-align: center;
+            color: white;
+            font-family: college;
+            word-spacing: 10px;
+            letter-spacing: 5px;
+            font-size: 35px;
+            line-height: 100px;
+        }
+
+        nav {
+            background-color: #007355;
+        }
+
+        ul.nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li.nav {
+            float: left;
+            width: 25%;
+        }
+
+            li.nav a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 20px;
+                text-decoration: none;
+            }
+
+                li.nav a:hover {
+                    background-color: #111111;
+                }
+
+        main {
+            background-color: #A49791;
+            float: left;
+            width: 55%;
+        }
+
+        aside {
+            background-color: #A66B63;
+            float: left;
+            width: 45%;
+        }
+
+		div#contact main, div#contact aside{
+			height:600px;
+		}
+
+        div#service main, div#service aside{
+            height:870px;
+		}
+
+        div#service td{
+            border: 3px solid white;
+            padding-left:10px;
+		}
+
+        div#about main, div#about aside{
+            height:2800px;
+		}
+
+        div#about > main img{
+            width:480px;
+        }
+
+        div#about > aside td{
+            padding:5px;
+        }
+
+        div#about > aside img{
+            width:170px;
+        }
+
+        div#about > aside td.therapist_name{
+            font-size:25px;
+        }
+		
+		div#thx main{
+			height:350px;
+            text-align:center;
+		}
+
+        div#thx aside{
+			height:350px;
+		}
+
+        div#home main, div#home aside{
+			height:400px;
+		}
+        div#home main p{
+            text-align:center;
+        }
+        .content {
+            padding: 10px;
+            color: white;
+            line-height: 40px;
+        }
+
+        footer {
+            background-color: #DB4B4A;
+            clear: both;
+        }
+
+        @font-face {
+            font-family: college;
+            src: url(fonts/college.ttf);
+        }
+
+        img.valid {
+            max-height: 80px;
+        }
+
+        img.rotating_banner{
+            max-height:380px;
+        }
+
+        tr.valid td {
+            padding: 0px 20px;
+            width: 30%;
+        }
+
+        a.valid {
+            color: black;
+        }
+
+        body {
+            background-image: url(../images/background.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: top 30% left 50%;
+            background-size: 90%;
+        }
+
+        textarea {
+            max-width: 80%;
+            width: 80%;
+            height: 50px;
+            max-height: 50px;
+        }
+
+        #ToTop {
+            display: none;
+            position: fixed;
+            bottom: 20px; 
+            right: 135px; 
+            z-index: 99; 
+            border: none;
+            outline: none;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+            #ToTop:hover {
+                background-color: #495350;
+            }
