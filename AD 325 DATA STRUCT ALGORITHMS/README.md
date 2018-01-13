@@ -1,0 +1,1 @@
+Covers fundamental data structure and their algorithms and applications in problem solving by programming. Includes linked lists, stacks, queues, priority queues, binary and multi-way trees, directed graphs, hashing, internal and external sorting.
