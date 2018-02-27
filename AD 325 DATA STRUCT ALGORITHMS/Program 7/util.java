@@ -9,7 +9,6 @@ public class util {
      * from -> to 1:n
      */
     private static HashMap<String, HashSet<String>> graph = new HashMap<>();
-    private static Queue<String> stops = new ArrayDeque<>();
     private static HashSet<String> been = new HashSet<>();
 
     static void readFile(String path) throws FileNotFoundException {
@@ -26,38 +25,34 @@ public class util {
         }
     }
 
-    /**
-     * Return how many stops have to make that gets from the one airport to the
-     * other.
-     *
-     * @param from
-     * @param to
-     * @return -1 if it's impossible to get from the one airport to the other.
-     */
-    private static int StopsToDestination(String from, String to) {
-        int count = 0;
-        stops.add(from);
-        while (stops.size() > 0) {
-            String poll = stops.poll();
-            if (been.contains(poll)) {
-                continue;
-            }
-            been.add(poll);
-            HashSet<String> get = graph.get(poll);
-            if (get == null) {
-                continue;
-            }
-            if (get.contains(to)) {
-                return count;
-            }
-            count++;
-            stops.addAll(get);
+    static int GetStops(String from, String to) {
+        HashSet<String> destinations = graph.get(from);
+        if (destinations == null || destinations.isEmpty()) {
+            return -1;
         }
-        return -1;
+        if (destinations.contains(to)) {
+            return 0;
+        }
+        //if already been this stop, avoid doing again. 
+        if (!been.add(from)) {
+            return -1;
+        }
+        int minStop = -1;
+        for (String d : destinations) {
+            int Stops = GetStops(d, to);
+            if (Stops == -1) {
+                continue;
+            }
+            if (minStop < 0) {
+                minStop = Stops + 1;
+            } else {
+                minStop = Integer.min(minStop, Stops + 1);
+            }
+        }
+        return minStop;
     }
 
     private static void Clean() {
-        stops.clear();
         been.clear();
     }
 
@@ -69,13 +64,13 @@ public class util {
             Scanner s = new Scanner(System.in);
             String inFrom = "", inTo = "";
             if (s.hasNext()) {
-                inFrom = s.next();
+                inFrom = s.next().toUpperCase();
             }
             if (s.hasNext()) {
-                inTo = s.next();
+                inTo = s.next().toUpperCase();
             }
 
-            int stps = StopsToDestination(inFrom, inTo);
+            int stps = GetStops(inFrom, inTo);
             String temp = "";
             if (stps == -1) {
                 temp = "Impossible to get there! ";
